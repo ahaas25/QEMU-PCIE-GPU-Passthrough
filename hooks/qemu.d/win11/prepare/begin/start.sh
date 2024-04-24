@@ -5,9 +5,10 @@ set -x
 ## Load the config file with our environmental variables
 #source "/etc/libvirt/hooks/kvm.conf"
 
-# Stop display manager (KDE specific)
+# Stop display manager
 systemctl stop gdm3
-systemctl stop ollama
+# Stop ollama
+# systemctl stop ollama
 
 # Unbind VTconsoles
 echo 0 > /sys/class/vtconsole/vtcon0/bind
